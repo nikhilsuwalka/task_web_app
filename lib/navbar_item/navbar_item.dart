@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:task_web_app/Models/NavBarItemModel.dart';
+import 'package:task_web_app/extention/hover_extention.dart';
 import 'package:task_web_app/locator.dart';
 import 'package:task_web_app/navbar_item/NavBarItemMobile.dart';
 import 'package:task_web_app/navbar_item/NavBarItemTabletDesktop.dart';
@@ -22,7 +23,6 @@ class NavBarItem extends StatelessWidget {
     );
     return GestureDetector(
       onTap: () {
-        // DON'T EVER USE A SERVICE DIRECTLY IN THE UI TO CHANGE ANY KIND OF STATE
         // SERVICES SHOULD ONLY BE USED FROM A VIEWMODEL
         locator<NavigationService>().navigateTo(navigationPath);
       },
@@ -31,7 +31,7 @@ class NavBarItem extends StatelessWidget {
         child: ScreenTypeLayout(
           tablet: NavBarItemTabletDesktop(),
           mobile: NavBarItemMobile(),
-        ),
+        ).showCursorOnHover.moveUpOnHover,
       ),
     );
   }

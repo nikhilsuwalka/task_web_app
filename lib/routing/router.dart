@@ -9,41 +9,42 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   print('generateRoute: ${settings.name}');
   switch (settings.name) {
     case HomeRoute:
-      return _getPageRoute(HomeScreen());
+      return _getPageRoute(HomeScreen(), settings);
     case ServiceRoute:
-      return _getPageRoute(ServiceScreen());
+      return _getPageRoute(ServiceScreen(), settings);
     case AboutRoute:
-      return _getPageRoute(AboutScreen());
+      return _getPageRoute(AboutScreen(), settings);
     default:
-      return _getPageRoute(HomeScreen());
+      return _getPageRoute(HomeScreen(), settings);
   }
 }
 
-PageRoute _getPageRoute(Widget child) {
-  return MaterialPageRoute(
-    builder: (context) => child,
-  );
+PageRoute _getPageRoute(Widget child, RouteSettings settings) {
+  return _FadeRoute(child: child, routeName: settings.name.toString());
 }
 
-class _AnimRoute extends PageRouteBuilder {
+class _FadeRoute extends PageRouteBuilder {
   final Widget child;
+  final String routeName;
 
-  _AnimRoute({required this.child})
+  _FadeRoute({required this.child, required this.routeName})
       : super(
-            pageBuilder: (
-              BuildContext context,
-              Animation<double> animation,
-              Animation<double> secondaryAnimation,
-            ) =>
-                child,
-            transitionsBuilder: (
-              BuildContext context,
-              Animation<double> animation,
-              Animation<double> secondaryAnimation,
-              Widget child,
-            ) =>
-                FadeTransition(
-                  opacity: animation,
-                  child: child,
-                ));
+          settings: RouteSettings(name: routeName),
+          pageBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+          ) =>
+              child,
+          transitionsBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+            Widget child,
+          ) =>
+              FadeTransition(
+            opacity: animation,
+            child: child,
+          ),
+        );
 }

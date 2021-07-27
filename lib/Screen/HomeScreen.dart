@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:task_web_app/Models/Detailtems.dart';
-
-import '../SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight.dart';
+import 'package:task_web_app/SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight.dart';
+import 'package:task_web_app/Utills/MyColors.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -71,23 +71,30 @@ class _HomeScreenState extends State<HomeScreen> {
                       decoration: new InputDecoration(
                           filled: true,
                           labelText: "First Name",
+                          labelStyle: TextStyle(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                          ),
                           fillColor: Colors.white,
                           border: new OutlineInputBorder(
                               borderSide: new BorderSide(
                                   width: 1.0, color: Colors.grey)),
                           focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue, width: 2.0),
+                            borderSide: BorderSide(
+                                color: MyColors.colorConvert(
+                                    MyColors.colorPrimary),
+                                width: 2.0),
                           ),
                           enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue, width: 2.0),
+                            borderSide: BorderSide(
+                                color: MyColors.colorConvert(
+                                    MyColors.colorPrimary),
+                                width: 2.0),
                           ),
                           hintText: "First Name"),
                       controller: _firstName,
                       style: TextStyle(
                         fontSize: _TxtfontSize,
-                        color: Colors.blue,
+                        color: MyColors.colorConvert(MyColors.colorPrimary),
                       ),
                     ),
                     flex: 1,
@@ -106,24 +113,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       keyboardType: TextInputType.text,
                       decoration: new InputDecoration(
                           labelText: "Last Name",
+                          labelStyle: TextStyle(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                          ),
                           filled: true,
                           fillColor: Colors.white,
                           border: new OutlineInputBorder(
                               borderSide: new BorderSide(
                                   width: 1.0, color: Colors.grey)),
                           focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue, width: 2.0),
+                            borderSide: BorderSide(
+                                color: MyColors.colorConvert(
+                                    MyColors.colorPrimary),
+                                width: 2.0),
                           ),
                           enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue, width: 2.0),
+                            borderSide: BorderSide(
+                                color: MyColors.colorConvert(
+                                    MyColors.colorPrimary),
+                                width: 2.0),
                           ),
                           hintText: "Last Name"),
                       controller: _lastName,
                       style: TextStyle(
                         fontSize: _TxtfontSize,
-                        color: Colors.blue,
+                        color: MyColors.colorConvert(MyColors.colorPrimary),
                       ),
                     ),
                     flex: 1,
@@ -148,6 +162,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       decoration: new InputDecoration(
                           labelText: "Mobile Number",
+                          labelStyle: TextStyle(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                          ),
                           filled: true,
                           counterText: "",
                           fillColor: Colors.white,
@@ -155,12 +172,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               borderSide: new BorderSide(
                                   width: 1.0, color: Colors.grey)),
                           focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue, width: 2.0),
+                            borderSide: BorderSide(
+                                color: MyColors.colorConvert(
+                                    MyColors.colorPrimary),
+                                width: 2.0),
                           ),
                           enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.blue, width: 2.0),
+                            borderSide: BorderSide(
+                                color: MyColors.colorConvert(
+                                    MyColors.colorPrimary),
+                                width: 2.0),
                           ),
                           hintText: "Mobile Number"),
                       controller: _mobile,
@@ -171,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                       style: TextStyle(
                         fontSize: _TxtfontSize,
-                        color: Colors.blue,
+                        color: MyColors.colorConvert(MyColors.colorPrimary),
                       ),
                     ),
                     flex: 1,
@@ -192,11 +213,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     _submit(context);
                   },
                   child: Container(
-                    height: 50,
-                    width: 120,
+                    height: 80,
+                    width: 150,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.teal),
+                        color: MyColors.colorConvert(MyColors.yellow)),
                     child: Center(
                         child: Text(
                       "Add",
@@ -233,22 +254,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 keyboardType: TextInputType.text,
                 decoration: new InputDecoration(
                     labelText: "First Name",
+                    labelStyle: TextStyle(
+                      color: MyColors.colorConvert(MyColors.colorPrimary),
+                    ),
                     filled: true,
                     fillColor: Colors.white,
                     border: new OutlineInputBorder(
                         borderSide:
                             new BorderSide(width: 1.0, color: Colors.grey)),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: BorderSide(
+                          color: MyColors.colorConvert(MyColors.colorPrimary),
+                          width: 2.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide: BorderSide(
+                          color: MyColors.colorConvert(MyColors.colorPrimary),
+                          width: 2.0),
                     ),
                     hintText: "First Name"),
                 controller: _firstName,
                 style: TextStyle(
                   fontSize: _TxtfontSize,
-                  color: Colors.blue,
+                  color: MyColors.colorConvert(MyColors.colorPrimary),
                 ),
               )),
               SizedBox(
@@ -265,22 +293,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   keyboardType: TextInputType.text,
                   decoration: new InputDecoration(
                       labelText: "Last Name",
+                      labelStyle: TextStyle(
+                        color: MyColors.colorConvert(MyColors.colorPrimary),
+                      ),
                       filled: true,
                       fillColor: Colors.white,
                       border: new OutlineInputBorder(
                           borderSide:
                               new BorderSide(width: 1.0, color: Colors.grey)),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                        borderSide: BorderSide(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                            width: 2.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                        borderSide: BorderSide(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                            width: 2.0),
                       ),
                       hintText: "Last Name"),
                   controller: _lastName,
                   style: TextStyle(
                     fontSize: _TxtfontSize,
-                    color: Colors.blue,
+                    color: MyColors.colorConvert(MyColors.colorPrimary),
                   ),
                 ),
               ),
@@ -299,6 +334,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   decoration: new InputDecoration(
                       labelText: "Mobile Number",
+                      labelStyle: TextStyle(
+                        color: MyColors.colorConvert(MyColors.colorPrimary),
+                      ),
                       filled: true,
                       counterText: "",
                       fillColor: Colors.white,
@@ -306,10 +344,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderSide:
                               new BorderSide(width: 1.0, color: Colors.grey)),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                        borderSide: BorderSide(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                            width: 2.0),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                        borderSide: BorderSide(
+                            color: MyColors.colorConvert(MyColors.colorPrimary),
+                            width: 2.0),
                       ),
                       hintText: "Mobile Number"),
                   controller: _mobile,
@@ -320,7 +362,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                   style: TextStyle(
                     fontSize: _TxtfontSize,
-                    color: Colors.blue,
+                    color: MyColors.colorConvert(MyColors.colorPrimary),
                   ),
                 ),
               ),
@@ -339,7 +381,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 120,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
-                          color: Colors.teal),
+                          color: MyColors.colorConvert(MyColors.yellow)),
                       child: Center(
                           child: Text(
                         "Add",
@@ -457,7 +499,9 @@ class _HomeScreenState extends State<HomeScreen> {
           mobile: mobileView(),
           desktop: webDisplay(),
         ),
-        SizedBox(height: 15,),
+        SizedBox(
+          height: 15,
+        ),
         Expanded(child: _gridView())
       ],
     );

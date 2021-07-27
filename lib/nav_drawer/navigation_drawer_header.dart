@@ -7,7 +7,7 @@ class NavigationDrawerHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 80,
       color: MyColors.colorConvert(MyColors.colorPrimary),
       alignment: Alignment.center,
       child: Column(

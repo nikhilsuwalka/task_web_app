@@ -5,4 +5,5 @@ GetIt locator = GetIt.instance;
 
 void setUpLocator(){
   locator.registerLazySingleton(() => NavigationService());
+
 }

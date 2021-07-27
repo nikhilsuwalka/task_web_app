@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:task_web_app/nav_drawer/navigation_drawer_header.dart';
+import 'package:task_web_app/navbar_item/navbar_item.dart';
 import 'package:task_web_app/routing/route_names.dart';
-
-import 'drawer_item.dart';
-import 'navigation_drawer_header.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
@@ -20,8 +19,8 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         children: <Widget>[
           NavigationDrawerHeader(),
-          DrawerItem('Services', Icons.home_repair_service, ServiceRoute),
-          DrawerItem('About', Icons.help, AboutRoute),
+          NavBarItem('Services', ServiceRoute, icon: Icons.home_repair_service),
+          NavBarItem('About', AboutRoute, icon: Icons.help),
         ],
       ),
     );
