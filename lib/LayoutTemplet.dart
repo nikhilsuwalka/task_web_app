@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:task_web_app/Views/centered_view.dart';
+import 'package:task_web_app/locator.dart';
+import 'package:task_web_app/nav_drawer/navigation_drawer.dart';
+import 'package:task_web_app/navigation_bar/navigation_bar.dart';
 import 'package:task_web_app/routing/route_names.dart';
 import 'package:task_web_app/routing/router.dart';
 import 'package:task_web_app/services/navigation_service.dart';
-
-import 'Views/centered_view.dart';
-import 'locator.dart';
-import 'nav_drawer/navigation_drawer.dart';
-import 'navigation_bar/navigation_bar.dart';
 
 class LayoutTemplet extends StatelessWidget {
   const LayoutTemplet({Key? key}) : super(key: key);
