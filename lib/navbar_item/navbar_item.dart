@@ -25,6 +25,7 @@ class NavBarItem extends StatelessWidget {
       onTap: () {
         // SERVICES SHOULD ONLY BE USED FROM A VIEWMODEL
         locator<NavigationService>().navigateTo(navigationPath);
+        Navigator.pop(context, true);
       },
       child: Provider.value(
         value: model,
