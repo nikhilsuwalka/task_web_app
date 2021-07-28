@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-
-import 'navigation_bar_mobile.dart';
-import 'navigation_bar_tablet_desktop.dart';
+import 'package:task_web_app/ResponsiveBuilder/responsive_builder.dart';
+import 'package:task_web_app/navigation_bar/navigation_bar_mobile.dart';
+import 'package:task_web_app/navigation_bar/navigation_bar_tablet_desktop.dart';
 
 class NavigationBar extends StatelessWidget {
   const NavigationBar({Key? key}) : super(key: key);

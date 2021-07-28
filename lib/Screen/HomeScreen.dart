@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 import 'package:task_web_app/Models/Detailtems.dart';
+import 'package:task_web_app/ResponsiveBuilder/responsive_builder.dart';
 import 'package:task_web_app/SliverGridDelegateWithFixedCrossAxisCountAndFixedHeight.dart';
 import 'package:task_web_app/Utills/MyColors.dart';
 
@@ -196,6 +196,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     flex: 1,
+                  ),
+                  SizedBox(
+                    width: 15,
                   ),
                   Expanded(
                     child: Container(),

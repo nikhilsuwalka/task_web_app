@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:task_web_app/LayoutTemplet.dart';
-import 'package:task_web_app/Screen/HomeScreen.dart';
-
-import 'Models/Detailtems.dart';
-import 'locator.dart';
+import 'package:task_web_app/locator.dart';
 
 void main() {
   setUpLocator();
@@ -16,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Responsive',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LayoutTemplet(),
+      home: LayoutTemplate(),
     );
   }
 }

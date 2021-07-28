@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import 'package:task_web_app/Responsive.dart';
+import 'package:task_web_app/ResponsiveBuilder/responsive_builder.dart';
 import 'package:task_web_app/Views/centered_view.dart';
 import 'package:task_web_app/locator.dart';
 import 'package:task_web_app/nav_drawer/navigation_drawer.dart';
@@ -9,8 +10,8 @@ import 'package:task_web_app/routing/route_names.dart';
 import 'package:task_web_app/routing/router.dart';
 import 'package:task_web_app/services/navigation_service.dart';
 
-class LayoutTemplet extends StatelessWidget {
-  const LayoutTemplet({Key? key}) : super(key: key);
+class LayoutTemplate extends StatelessWidget {
+  const LayoutTemplate({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
